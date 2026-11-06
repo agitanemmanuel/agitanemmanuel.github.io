@@ -70,6 +70,8 @@
     pointer-events: none;
   }
   .hero .wrap { position: relative; }
+.hero-grid { display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center; }
+.hero-visual img { width: 100%; max-width: 340px; margin-left: auto; border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 0 70px rgba(45, 212, 191, 0.14); display: block; }
   .eyebrow { font-family: 'JetBrains Mono', monospace; color: var(--teal); font-size: 0.85rem; margin-bottom: 18px; letter-spacing: 0.02em; }
   .hero h1 { font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.08; max-width: 720px; }
   .hero h1 .grad { background: linear-gradient(90deg, var(--teal), var(--purple)); -webkit-background-clip: text; background-clip: text; color: transparent; }
@@ -104,6 +106,7 @@
   .case .metric { font-family: 'Space Grotesk', sans-serif; font-size: 1.9rem; font-weight: 700; color: var(--teal); }
   .case h3 { font-size: 1.15rem; }
   .case p { color: var(--muted); font-size: 0.92rem; }
+.case-img { width: 100%; height: 140px; object-fit: cover; border-radius: 10px; }
   .case .tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; }
   .tag { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--muted); background: var(--surface-2); border: 1px solid var(--border); padding: 3px 9px; border-radius: 6px; }
 
@@ -153,6 +156,8 @@
     .work-grid { grid-template-columns: 1fr; }
     .steps { grid-template-columns: 1fr 1fr; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; }
+    .hero-grid { grid-template-columns: 1fr; }
+    .hero-visual img { max-width: 240px; margin: 0 auto; }
     .service-row { grid-template-columns: 1fr; gap: 6px; }
   }
   @media (prefers-reduced-motion: reduce) {
@@ -178,8 +183,9 @@
 </nav>
 
 <header class="hero">
-  <div class="wrap">
-    <div class="eyebrow">AI Agent Orchestrator &amp; Automation Consultant</div>
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">AI Agent Orchestrator &amp; Automation Consultant</div>
     <h1>I build AI agents that do <span class="grad">real work</span> — not just chat.</h1>
     <p>Custom AI agents and workflow automation for businesses, freelancers, and founders. Reclaim hours every week by putting the repetitive work on autopilot.</p>
     <div class="hero-ctas">
@@ -187,6 +193,10 @@
       <a class="btn btn-ghost" href="#work">See the work</a>
     </div>
     <div class="hero-note"><span>●</span> Based in Port Harcourt, Nigeria · Working with clients worldwide</div>
+    </div>
+    <div class="hero-visual">
+      <img src="hero.jpg" alt="Agitan Emmanuel" />
+    </div>
   </div>
 </header>
 
@@ -224,18 +234,21 @@
     </div>
     <div class="work-grid">
       <article class="case">
+        <img class="case-img" src="case1.jpg" alt="Gmail inbox cleanup agent" />
         <div class="metric">1,580</div>
         <h3>Gmail Inbox Cleanup Agent</h3>
         <p>Deleted 1,580 redundant bank login-alert emails in under an hour, then scheduled a daily job to auto-delete new ones — a permanently clean inbox with zero manual effort.</p>
         <div class="tags"><span class="tag">Gmail API</span><span class="tag">Composio</span><span class="tag">Scheduled automation</span></div>
       </article>
       <article class="case">
+        <img class="case-img" src="case2.jpg" alt="Multi-app AI orchestration" />
         <div class="metric">9+</div>
         <h3>Multi-App AI Orchestration</h3>
         <p>Unified Gmail, Drive, Docs, Sheets, Calendar, YouTube, and LinkedIn into a single automation layer, so one agent coordinates work across all of them.</p>
         <div class="tags"><span class="tag">Composio</span><span class="tag">MCP</span><span class="tag">OAuth</span></div>
       </article>
       <article class="case">
+        <img class="case-img" src="case3.jpg" alt="Automated LinkedIn content engine" />
         <div class="metric">2×/wk</div>
         <h3>Automated LinkedIn Content Engine</h3>
         <p>A 50-workflow content queue that writes and publishes SEO-optimized posts twice a week, hands-free — building a consistent personal brand on autopilot.</p>
