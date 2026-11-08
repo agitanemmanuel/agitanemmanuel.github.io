@@ -136,6 +136,19 @@
   .guarantee { margin-top: 28px; text-align: center; color: var(--muted); font-size: 0.94rem; }
   .guarantee b { color: var(--teal); font-weight: 600; }
 
+  /* AI Workforce */
+  .workforce { border-top: 1px solid var(--border); }
+  .workforce-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .emp {
+    background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+    padding: 18px; display: flex; flex-direction: column; gap: 8px;
+    transition: border-color .18s;
+  }
+  .emp:hover { border-color: var(--teal-dim); }
+  .emp .num { font-family: 'JetBrains Mono', monospace; color: var(--teal); font-size: 0.72rem; }
+  .emp h4 { font-size: 1rem; font-weight: 600; }
+  .emp p { color: var(--muted); font-size: 0.85rem; line-height: 1.45; }
+
   /* About */
   .about { border-top: 1px solid var(--border); }
   .about-grid { display: grid; grid-template-columns: 220px 1.2fr 1fr; gap: 48px; align-items: start; }
@@ -172,6 +185,7 @@
   @media (max-width: 860px) {
     .nav-links { display: none; }
     .work-grid, .pricing-grid { grid-template-columns: 1fr; }
+    .workforce-grid { grid-template-columns: 1fr 1fr; }
     .steps { grid-template-columns: 1fr 1fr; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; }
     .hero-grid { grid-template-columns: 1fr; }
@@ -191,6 +205,7 @@
     <div class="logo"><span class="dot"></span>Agitan Emmanuel</div>
     <div class="nav-links">
       <a href="#services">Services</a>
+      <a href="#workforce">Workforce</a>
       <a href="#product">LeadFlow AI</a>
       <a href="#work">Work</a>
       <a href="#process">Process</a>
@@ -240,6 +255,32 @@
       <div class="service-num">03</div>
       <h3>AI Consulting &amp; Strategy</h3>
       <p>Not sure where to start? I audit your day-to-day processes and map the highest-impact automations first, so you don't waste time on the wrong ones.</p>
+    </div>
+  </div>
+</section>
+
+<section class="workforce" id="workforce">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">AI Workforce</div>
+      <h2>Meet your 14 AI employees</h2>
+      <p>Every role a business needs to offload repetitive work — built once, working around the clock.</p>
+    </div>
+    <div class="workforce-grid">
+      <div class="emp"><div class="num">01</div><h4>AI Personal Assistant</h4><p>Sorts email, drafts replies, builds your daily agenda.</p></div>
+      <div class="emp"><div class="num">02</div><h4>AI Money Saver</h4><p>Tracks spending, flags unused subscriptions, delivers savings reports.</p></div>
+      <div class="emp"><div class="num">03</div><h4>AI Video Editor</h4><p>Turns raw footage into a polished cut with captions.</p></div>
+      <div class="emp"><div class="num">04</div><h4>AI Web Designer</h4><p>Audits your site and rewrites weak copy and layout.</p></div>
+      <div class="emp"><div class="num">05</div><h4>AI Social Growth Strategist</h4><p>Finds trends, writes hooks, builds a content calendar.</p></div>
+      <div class="emp"><div class="num">06</div><h4>AI YouTube Growth Strategist</h4><p>Researches topics, titles, and thumbnail concepts.</p></div>
+      <div class="emp"><div class="num">07</div><h4>AI Content Creator</h4><p>Generates posts and images from your brand.</p></div>
+      <div class="emp"><div class="num">08</div><h4>AI Chief Marketing Officer</h4><p>Reviews metrics daily and recommends campaigns.</p></div>
+      <div class="emp"><div class="num">09</div><h4>AI Competitive Intelligence</h4><p>Tracks competitors and finds gaps to exploit.</p></div>
+      <div class="emp"><div class="num">10</div><h4>AI Outreach Expert</h4><p>Finds prospects and writes personalized outreach.</p></div>
+      <div class="emp"><div class="num">11</div><h4>AI Media Buyer</h4><p>Monitors ad spend and flags underperforming ads.</p></div>
+      <div class="emp"><div class="num">12</div><h4>AI Presentation Designer</h4><p>Turns a topic into a slide deck.</p></div>
+      <div class="emp"><div class="num">13</div><h4>AI Customer Support</h4><p>Answers routine questions, escalates the hard ones.</p></div>
+      <div class="emp"><div class="num">14</div><h4>AI Receptionist</h4><p>Answers calls 24/7 and books appointments.</p></div>
     </div>
   </div>
 </section>
