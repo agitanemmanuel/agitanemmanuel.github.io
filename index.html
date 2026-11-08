@@ -118,6 +118,24 @@
   .step h3 { font-size: 1.1rem; margin-bottom: 8px; }
   .step p { color: var(--muted); font-size: 0.9rem; }
 
+  /* Product / pricing */
+  .product { border-top: 1px solid var(--border); }
+  .pricing-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .price-card {
+    background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 28px; display: flex; flex-direction: column; gap: 14px;
+  }
+  .price-card.featured { border-color: var(--teal-dim); box-shadow: 0 0 40px rgba(45, 212, 191, 0.10); }
+  .badge { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--teal); letter-spacing: 0.06em; text-transform: uppercase; }
+  .price-card h3 { font-size: 1.1rem; }
+  .price { font-family: 'Space Grotesk', sans-serif; font-size: 2.3rem; font-weight: 700; }
+  .price span { font-size: 1rem; color: var(--muted); font-weight: 500; }
+  .price-card ul { list-style: none; display: flex; flex-direction: column; gap: 10px; color: var(--muted); font-size: 0.92rem; flex: 1; }
+  .price-card ul li { padding-left: 24px; position: relative; }
+  .price-card ul li::before { content: "✓"; position: absolute; left: 0; color: var(--teal); }
+  .guarantee { margin-top: 28px; text-align: center; color: var(--muted); font-size: 0.94rem; }
+  .guarantee b { color: var(--teal); font-weight: 600; }
+
   /* About */
   .about { border-top: 1px solid var(--border); }
   .about-grid { display: grid; grid-template-columns: 220px 1.2fr 1fr; gap: 48px; align-items: start; }
@@ -153,7 +171,7 @@
 
   @media (max-width: 860px) {
     .nav-links { display: none; }
-    .work-grid { grid-template-columns: 1fr; }
+    .work-grid, .pricing-grid { grid-template-columns: 1fr; }
     .steps { grid-template-columns: 1fr 1fr; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; }
     .hero-grid { grid-template-columns: 1fr; }
@@ -173,6 +191,7 @@
     <div class="logo"><span class="dot"></span>Agitan Emmanuel</div>
     <div class="nav-links">
       <a href="#services">Services</a>
+      <a href="#product">LeadFlow AI</a>
       <a href="#work">Work</a>
       <a href="#process">Process</a>
       <a href="#about">About</a>
@@ -269,6 +288,53 @@
         <div class="tags"><span class="tag">DeepSeek</span><span class="tag">Web search</span><span class="tag">Personalized outreach</span></div>
       </article>
     </div>
+  </div>
+</section>
+
+<section class="product" id="product">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="kicker">Product · LeadFlow AI</div>
+      <h2>Never chase leads again. We find them for you.</h2>
+      <p>LeadFlow AI discovers businesses that need what you sell, researches them, scores them on fit, and writes a personalized message for each — delivered to you every week.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <h3>Starter</h3>
+        <div class="price">₦30,000<span>/mo</span></div>
+        <ul>
+          <li>15 qualified leads / month</li>
+          <li>Personalized message per lead</li>
+          <li>1 target niche</li>
+          <li>Fit scores to prioritize</li>
+        </ul>
+        <a class="btn btn-ghost" href="#book">Start now</a>
+      </div>
+      <div class="price-card featured">
+        <div class="badge">Most popular</div>
+        <h3>Growth</h3>
+        <div class="price">₦60,000<span>/mo</span></div>
+        <ul>
+          <li>40 qualified leads / month</li>
+          <li>Personalized messages + follow-ups</li>
+          <li>Up to 3 target niches</li>
+          <li>Contact details included</li>
+        </ul>
+        <a class="btn btn-primary" href="#book">Start now</a>
+      </div>
+      <div class="price-card">
+        <h3>Scale</h3>
+        <div class="price">₦120,000<span>/mo</span></div>
+        <ul>
+          <li>100 qualified leads / month</li>
+          <li>Unlimited niches</li>
+          <li>CRM-ready export</li>
+          <li>Weekly review call</li>
+        </ul>
+        <a class="btn btn-ghost" href="#book">Start now</a>
+      </div>
+    </div>
+    <div class="guarantee"><b>Delivery guaranteed.</b> If we don't deliver your leads in a month, that month is free — no questions.</div>
   </div>
 </section>
 
